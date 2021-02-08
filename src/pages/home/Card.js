@@ -1,18 +1,14 @@
 import React from 'react';
-import {useSelector,useDispatch} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import{addToCart} from '../../actions/addToCart.js';
 
  function Card( {info,refresh} ) {
-
-  const cart = useSelector(state => state.addedFlight)
-  const data = useSelector(state => state.data)
-  const dispatch = useDispatch();
-
   
+  const dispatch = useDispatch();  
 
   function add(info){
     refresh()
-    dispatch(addToCart(info,cart,data))  
+    dispatch(addToCart(info))  
   }
 
   return (

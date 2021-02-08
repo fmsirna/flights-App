@@ -9,10 +9,10 @@ import {useSelector} from 'react-redux';
 
 function Home() {  
 
-  const flightData = useSelector(state => state.data)
-  const [list, setList] = useState(flightData);
-  const [filter, setFilter] = useState({tags:"",price:0})
-  const [update, setUpdate] = useState(false);
+  let flightData = useSelector(state => state.data)
+  let [list, setList] = useState(flightData);
+  let [filter, setFilter] = useState({tags:"",price:0})
+  let [update, setUpdate] = useState(false);
   useEffect(() => {    
     const newList = flightData.filter((item) => {return( item.tags.includes(`${filter.tags.toLowerCase()}`))}
       );

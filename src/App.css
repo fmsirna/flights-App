@@ -155,7 +155,7 @@ background: none;
     display:flex;
     margin-top:15px;
     margin-bottom:15px;
-    width:95%;
+    width:100%;
     min-width:300px;
     justify-content: space-around;
     align-items: center;
@@ -175,14 +175,32 @@ background: none;
 .cart-price{
     color: rgb(0, 92, 15);
     text-shadow: 1px 0px rgb(48, 48, 6);
-    width:100px;
+    width:190px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
 }
 .cart-lines{
-    display: flex;
-    justify-content:space-around;
-    width:90%;
-}
-.cart-line{
     border: 1px dashed #000;
-    width:100px;    
+    width:80%;
+}
+.cart-purchase{
+    padding-top:30px;
+    display:flex;
+}
+.cart-btn{
+    color:white;
+    background-color:rgb(29, 43, 146);
+    width:100px;
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+.cart-delete{
+    width:50px;
+    height:40px;
+    cursor:pointer;
+    color:rgb(209, 0, 0);
 }

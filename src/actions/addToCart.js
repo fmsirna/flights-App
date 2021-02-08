@@ -1,9 +1,7 @@
-export const addToCart = (item,arrayCart,arrayData) => {
+export const addToCart = (item) => {
     
     return{
-        type: 'flight_selected',
-        arrayCart:arrayCart,
-        arrayData: arrayData,
+        type: 'flight_Add',         
         payload: item
     }
 }
