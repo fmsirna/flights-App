@@ -12,8 +12,9 @@ function App() {
 
 
   return (
-    <>
+    < >
       <Router>
+        <div  className='container'>
         <Navbar />
         <img src= {'/images/back.jpg'} className="backImage"/> 
         <Switch>
@@ -21,6 +22,8 @@ function App() {
           <Route path='/cart' component={Cart} />
           <Route path='/aboutus' component={About} />
         </Switch>
+        <footer className='footer'> <p>2021 all rights reserved</p> </footer>
+        </div>
       </Router>      
     </>
   );

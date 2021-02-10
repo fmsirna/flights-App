@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect,useRef } from 'react';
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from 'react-router-dom';
@@ -7,20 +7,34 @@ import './Navbar.css';
 
 function Navbar() {
   const [sidebar, setSidebar] = useState(false);
+  const inputRef = useRef(null)
+ 
+  useEffect(() => {    
+    document.addEventListener("click", outsideClick)    
+    return () => {
+      document.removeEventListener("click", outsideClick);
+    };
+    });
 
-  const showSidebar = () => setSidebar(!sidebar);
+  function outsideClick(e) {
+    if (inputRef.current && !inputRef.current.contains(e.target)) {
+      setSidebar(!sidebar)
+    }  
+  }  
+  function showSidebar (){            
+    setSidebar(!sidebar)
+  }  
 
   return (
     <>     
-        <div className='navbar'> 
-        <div className='logo'>
-        <img src={'/images/avion.jpg'} className='icon' alt='icon' ></img> <h4>American Flights </h4> 
+        <div className='navbar' > 
+        <div className='logo' >
+        <img src={'/images/avion.jpg'}   className='icon' alt='icon' ></img> <h4>American Flights </h4> 
         </div>          
           <Link to='#' className='menu-bars'>
-            <FaIcons.FaBars onClick={showSidebar} />
-          </Link>         
-              
-            <nav  className={sidebar ?'nav-menu' : 'hide'}>
+            <FaIcons.FaBars  onClick={showSidebar} />
+          </Link>                  
+             <nav ref={inputRef} className={sidebar ? 'nav-menu' : 'hide'}>
                 <div className='nav-menu-items'>
                   <span className='navbar-cross'>
                       <Link to='#' className='menu-bars cross' onClick={showSidebar}>
@@ -40,7 +54,7 @@ function Navbar() {
                   })}
                   </ul>
                 </div>           
-             </nav>   
+                </nav> 
         </div>  
         
     </>

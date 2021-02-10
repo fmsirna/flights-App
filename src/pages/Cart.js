@@ -11,7 +11,7 @@ function Cart() {
    const dispatch = useDispatch();
 
   useEffect(() => {  
-    if (cart !=null)  {
+    if (cart.length > 0)  {
      let sum = cart.reduce(function(prev, cur) {
       return prev + cur.price;
     }, 0);
@@ -29,8 +29,7 @@ function remove(item){
 
   return (
     <>
-    {cart != null  ? 
-    ( cart.length > 0 ? 
+    {cart.length > 0  ?     
     <div className='cart-container' >      
        {  cart.map( (item)=>
        <div className='cart-item-container' key={item.tags}>
@@ -45,9 +44,8 @@ function remove(item){
               <p className='cart-price'>Total:  US$ {total}</p>
               <button type="button" className='cart-btn' >BUY</button>
        </div>
-    </div>
-      : <p>No Flights added to the cart</p> )
-    :<p>No Flights added to the cart</p>    } 
+    </div>      
+    :<div className='cart-noFound'>No Flights added to the cart</div>    } 
     </>
   );
 }
