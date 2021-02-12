@@ -16,7 +16,7 @@ import{addToCart} from '../../actions/addToCart.js';
     <div className="card">
       <div className='card-container'>
      <img src={info.photo} className='card-image' alt={info.tags} />
-     {(info.cartAdded) && <div className='card-added' >Added to cart</div>}
+     {(info.cartAdded) && <div className='card-added' >Added, go to cart page</div>}
      <p className= 'card-country'> {info.country} </p>
      <p className= 'card-city'> {info.city} </p>
      <p className='card-price'>{info.price} <span className='card-usd'>$USD</span> </p>

@@ -133,11 +133,11 @@ background: none;
 .card-added{
     position:absolute;
     top: 0px;
-    left:25%;
+    left:16%;
     background-color:black;    
     color:white;
-    width:130px;
-    height:25px;
+    width:170px;
+    height:35px;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -257,6 +257,7 @@ background: none;
 .cart-purchase{
     padding-top:30px;
     display:flex;
+    margin-bottom:35px;
 }
 .cart-btn{
     color:white;
