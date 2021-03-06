@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from './pages/home/Home';
-import Cart from './pages/Cart.js';
-import About from './pages/About.js';
+import Home from './components/home/Home';
+import Cart from './components/Cart/Cart.js';
+import About from './components/about/About.js';
 
 
 

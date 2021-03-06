@@ -10,10 +10,12 @@ function Navbar() {
   const inputRef = useRef(null)
   const inputRef2 = useRef(null)
  
+  // when click outside the navbar, hide it. when click something that is not the first 2 parameters elements(navbar).
   OutsideClick(inputRef,inputRef2, () => {
     inputRef.current.className = 'hide'
   }); 
 
+  // to show/hide nabvar changing the class of the element by Refs.
   function showSidebar (){            
     inputRef.current.className = 'nav-menu'
   }  

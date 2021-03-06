@@ -1,7 +1,8 @@
 import React, { useState,useEffect } from 'react';
+import './Cart.css';
 import * as tiIcons from 'react-icons/ti';
 import {useSelector,useDispatch} from 'react-redux';
-import{RemoveItem} from '../actions/removeItem.js';
+import{RemoveItem} from '../../actions/removeItem.js';
 
 
 function Cart() {   
