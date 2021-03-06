@@ -26,9 +26,9 @@ function Navbar() {
   return (
     <>     
         <div className='navbar' > 
-        <div className='logo' >
-        <img src={'/images/avion.jpg'}   className='icon' alt='icon' ></img> <h4>American Flights </h4> 
-        </div>          
+        <Link to="/" className='logo'>        
+        <img src={'/images/avion.jpg'}   className='icon' alt='icon' ></img> <h4>American Flights </h4>   
+        </Link>      
           <Link to='#' className='menu-bars' ref={inputRef2}>
             <FaIcons.FaBars  onClick={showSidebar} />
           </Link>                  

@@ -8,6 +8,7 @@ import{addToCart} from '../../actions/addToCart.js';
 
   function add(info){
     refresh()
+    // to call the "addToCart" reducer ACTION and update the cartAdded Redux Store
     dispatch(addToCart(info))  
   }
 

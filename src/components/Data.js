@@ -1,4 +1,4 @@
-
+// this information could have been replaced by getting info from an API
 
 export const flightData = [
   {   
