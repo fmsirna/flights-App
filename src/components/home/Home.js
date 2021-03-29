@@ -1,4 +1,4 @@
-import React, {Fragment, useState,useEffect } from 'react';
+import React, {useState,useEffect } from 'react';
 import * as FcIcons from 'react-icons/fc';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, DatePicker } from "@material-ui/pickers";

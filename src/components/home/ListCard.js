@@ -1,5 +1,5 @@
 import * as RiIcons from 'react-icons/ri';
-import React, {useRef, useEffect } from 'react';
+import React, {useRef} from 'react';
 import  Card  from './Card.js';
 
 export default function ListCards({ cards,refresh }) {
