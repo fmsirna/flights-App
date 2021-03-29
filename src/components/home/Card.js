@@ -16,12 +16,16 @@ import{addToCart} from '../../actions/addToCart.js';
     
     <div className="card">
       <div className='card-container'>
-     <img src={info.photo} className='card-image' alt={info.tags} />
-     {(info.cartAdded) && <div className='card-added' >Added, go to cart page</div>}
-     <p className= 'card-country'> {info.country} </p>
-     <p className= 'card-city'> {info.city} </p>
-     <p className='card-price'>{info.price} <span className='card-usd'>$USD</span> </p>
-     <button type="button" className='card-add' onClick={ () => add(info)} >ADD</button>
+        <img src={info.photo} className='card-image' alt={info.tags} />
+         {(info.cartAdded) && <div className='card-added' >Added, go to cart page</div>}
+        <p className= 'card-country'> {info.country} </p>
+        <p className= 'card-city'> {info.city} </p>        
+        <p className='card-price'>{info.price} <span className='card-usd'>$USD</span> </p>
+        <div className='card-time'>
+            <p> From: {info.departure} </p>
+            <p> To: {info.return} </p>
+        </div>
+        <button type="button" className='card-add' onClick={ () => add(info)} >ADD</button>
      </div>
     </div>
     

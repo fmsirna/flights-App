@@ -1,14 +1,19 @@
 // this information could have been replaced by getting info from an API
 
+import moment from 'moment';
+
+
 export const flightData = [
   {   
-    tags: 'cataratas del iguazu, misiones, argentina',
+    tags: 'iguazu, cataratas, misiones, argentina',
     id: 534663,
     photo: '/images/cataratas.jpg',   
-    city: 'Cataratas del iguazu',
+    city: 'Iguazu',
     country: 'Argentina',     
     cartAdded:false,  
-    price: 600    
+    price: 600,
+    departure: moment().add(7,'days').format("MM/DD/YYYY"),
+    return: moment().add(22,'days').format("MM/DD/YYYY")    
   },
   {   
     tags: 'bariloche neuquen argentina',
@@ -17,7 +22,9 @@ export const flightData = [
     city: 'Bariloche',
     country: 'Argentina',     
     cartAdded:false,  
-    price: 700
+    price: 700,
+    departure: moment().add(7,'days').add(2,'months').format("MM/DD/YYYY"),
+    return: moment().add(22,'days').add(2,'months').format("MM/DD/YYYY")    
   },
   {   
     tags: 'brasil rio de janeiro brazil',
@@ -26,7 +33,9 @@ export const flightData = [
     city: 'Rio de janeiro',
     country: 'Brasil',     
     cartAdded:false, 
-    price: 1200
+    price: 1200,
+    departure: moment().add(7,'days').add(3,'months').format("MM/DD/YYYY"),
+    return: moment().add(22,'days').add(3,'months').format("MM/DD/YYYY")   
   },
   {   
     tags: 'chile concepcion',
@@ -35,7 +44,9 @@ export const flightData = [
     city: 'Concepcion',
     country: 'Chile',   
     cartAdded:false,   
-    price: 1100
+    price: 1100,
+    departure: moment().add(13,'days').add(4,'months').format("MM/DD/YYYY"),
+    return: moment().add(22,'days').add(4,'months').format("MM/DD/YYYY")    
   },
    {   
     tags: 'brasil buzios brazil playa',
@@ -44,7 +55,9 @@ export const flightData = [
     city: 'Buzios',
     country: 'Brasil', 
     cartAdded:false,     
-    price: 1600
+    price: 1600,
+    departure: moment().add(13,'days').add(5,'months').format("MM/DD/YYYY"),
+    return: moment().add(22,'days').add(5,'months').format("MM/DD/YYYY")     
   },
   {   
     tags: 'chile valparaiso',
@@ -53,7 +66,9 @@ export const flightData = [
     city: 'Valparaiso',
     country: 'Chile',     
     cartAdded:false, 
-    price: 1600
+    price: 1600,
+    departure: moment().add(13,'days').add(6,'months').format("MM/DD/YYYY"),
+    return: moment().add(22,'days').add(6,'months').format("MM/DD/YYYY")  
   },
   {   
     tags: 'brasil brazil sao paulo',
@@ -62,7 +77,9 @@ export const flightData = [
     city: 'São Paulo',
     country: 'Brasil',     
     cartAdded:false, 
-    price: 800
+    price: 800,
+    departure: moment().add(13,'days').add(7,'months').format("MM/DD/YYYY"),
+    return: moment().add(22,'days').add(7,'months').format("MM/DD/YYYY")  
   },
   {   
     tags: 'uruguay punta del este',
@@ -71,7 +88,9 @@ export const flightData = [
     city: 'Punta del este',
     country: 'Uruguay', 
     cartAdded:false,     
-    price: 1800
+    price: 1800,
+    departure: moment().add(13,'days').add(7,'months').format("MM/DD/YYYY"),
+    return: moment().add(22,'days').add(7,'months').format("MM/DD/YYYY")  
   },
   {   
     tags: 'uruguay montevideo',
@@ -80,7 +99,9 @@ export const flightData = [
     city: 'Montevideo',
     country: 'Uruguay',   
     cartAdded:false,   
-    price: 750
+    price: 750,
+    departure: moment().add(13,'days').add(8,'months').format("MM/DD/YYYY"),
+    return: moment().add(22,'days').add(8,'months').format("MM/DD/YYYY")   
   },
   {   
     tags: 'colombia medellin',
@@ -89,7 +110,9 @@ export const flightData = [
     city: 'Medellin',
     country: 'Colombia', 
     cartAdded:false,     
-    price: 950
+    price: 950,
+    departure: moment().add(13,'days').add(1,'months').format("MM/DD/YYYY"),
+    return: moment().add(22,'days').add(1,'months').format("MM/DD/YYYY")  
   },
   {   
     tags: 'colombia bogota',
@@ -98,7 +121,9 @@ export const flightData = [
     city: 'Bogota',
     country: 'Colombia',  
     cartAdded:false,    
-    price: 1050
+    price: 1050,
+    departure: moment().add(2,'days').format("MM/DD/YYYY"),
+    return: moment().add(15,'days').format("MM/DD/YYYY")    
   },
   {   
     tags: 'mexico cancun',
@@ -107,7 +132,9 @@ export const flightData = [
     city: 'Cancun',
     country: 'Mexico',   
     cartAdded:false,   
-    price: 1950
+    price: 1950,
+    departure: moment().add(1,'days').format("MM/DD/YYYY"),
+    return: moment().add(8,'days').format("MM/DD/YYYY")    
   },
   {   
     tags: 'mexico playa del carmen',
@@ -116,7 +143,9 @@ export const flightData = [
     city: 'Playa del carmen',
     country: 'Mexico',    
     cartAdded:false,  
-    price: 1450
+    price: 1450,
+    departure: moment().add(13,'days').add(1,'months').format("MM/DD/YYYY"),
+    return: moment().add(22,'days').add(1,'months').format("MM/DD/YYYY")    
   },
   {   
     tags: 'usuahia argentina nieve sur',
@@ -125,7 +154,9 @@ export const flightData = [
     city: 'Usuahia',
     country: 'Argentina', 
     cartAdded:false,     
-    price: 1600
+    price: 1600,
+    departure: moment().add(13,'days').add(1,'months').format("MM/DD/YYYY"),
+    return: moment().add(22,'days').add(1,'months').format("MM/DD/YYYY")    
   },
   {   
     tags: 'mendoza argentina',
@@ -134,7 +165,9 @@ export const flightData = [
     city: 'Mendoza',
     country: 'Argentina',  
     cartAdded:false,    
-    price: 1600
+    price: 1600,
+    departure: moment().add(22,'days').format("MM/DD/YYYY"),
+    return: moment().add(40,'days').format("MM/DD/YYYY")    
   },
   {   
     tags: 'cordoba argentina',
@@ -143,7 +176,9 @@ export const flightData = [
     city: 'Cordoba',
     country: 'Argentina',     
     cartAdded:false, 
-    price: 500
+    price: 500,
+    departure: moment().add(1,'days').format("MM/DD/YYYY"),
+    return: moment().add(10,'days').format("MM/DD/YYYY")    
   },
   {   
     tags: 'cusco peru',
@@ -152,7 +187,9 @@ export const flightData = [
     city: 'Cusco',
     country: 'Peru', 
     cartAdded:false,     
-    price: 1000
+    price: 1000,
+    departure: moment().add(13,'days').add(5,'months').format("MM/DD/YYYY"),
+    return: moment().add(22,'days').add(5,'months').format("MM/DD/YYYY")    
   },
   {   
     tags: 'lima peru',
@@ -161,7 +198,9 @@ export const flightData = [
     city: 'Lima',
     country: 'Peru',   
     cartAdded:false,   
-    price: 1000
+    price: 1000,
+    departure: moment().add(1,'days').add(7,'months').format("MM/DD/YYYY"),
+    return: moment().add(6,'days').add(7,'months').format("MM/DD/YYYY")    
   }
 ]
 

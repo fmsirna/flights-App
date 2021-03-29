@@ -1,5 +1,5 @@
 import * as RiIcons from 'react-icons/ri';
-import React, {useRef } from 'react';
+import React, {useRef, useEffect } from 'react';
 import  Card  from './Card.js';
 
 export default function ListCards({ cards,refresh }) {
@@ -10,7 +10,7 @@ export default function ListCards({ cards,refresh }) {
   }
   function scrollRight(){    
     ref.current.scrollLeft += 350
-  }
+  } 
 
 
   return (
@@ -19,8 +19,8 @@ export default function ListCards({ cards,refresh }) {
     <div className='list-container'>
        <RiIcons.RiArrowLeftSFill className='list-btn' onClick={scrollLeft} />       
       <div ref={ref} className="list"> 
-        {          
-            cards.map((item) =>  <Card key={item.tags} info={item} refresh={refresh} />)            
+        {                      
+            cards.map((item) =>  <Card key={item.tags} info={item} refresh={refresh} />)           
         }
       </div>      
       <RiIcons.RiArrowRightSFill className='list-btn' onClick={scrollRight} />       
