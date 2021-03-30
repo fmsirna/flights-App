@@ -137,10 +137,10 @@ export const flightData = [
     return: moment().add(8,'days').format("MM/DD/YYYY")    
   },
   {   
-    tags: 'mexico playa del carmen',
+    tags: 'mexico playa carmen',
     id: 133334,
     photo: '/images/playacarmenmexico.jpg',        
-    city: 'Playa del carmen',
+    city: 'Playa Carmen',
     country: 'Mexico',    
     cartAdded:false,  
     price: 1450,

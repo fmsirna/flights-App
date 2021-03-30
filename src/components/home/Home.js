@@ -75,6 +75,7 @@ function Home() {
         <button className="btn-lookup" value={filter.tags}  onClick={handleFilter}><FcIcons.FcSearch size={30}/></button>      
       </div>
     </div>
+    <div className='f-container'>
     <div className='filter-container'>
         <div className="price-lookup">
             <p className="price-n">Price lower than:</p>
@@ -102,9 +103,8 @@ function Home() {
               />
             </MuiPickersUtilsProvider>
         </div>
-
     </div>    
-    
+    </div>
     <ListCard refresh={refresh} cards={list} />
     </>
   );

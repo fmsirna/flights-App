@@ -167,11 +167,17 @@ background: none;
     font-weight:bold;
     font-size:18px;
 }
+.f-container{
+    display: flex;
+    justify-content: center;
+}
 .filter-container{
     display:flex;
     flex-direction: column;
     justify-content:space-around;
-    align-items: center;    
+    align-items: center;   
+    width:auto; 
+    min-width:760px;    
 }
 .price-lookup{
     display:flex;    
